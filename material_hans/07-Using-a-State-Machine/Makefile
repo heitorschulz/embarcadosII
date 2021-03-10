@@ -786,7 +786,9 @@ $(DOXYGENCFG):
 
 
 
-## Clean the generated documentation#
+#
+# Clean the generated documentation
+#
 docs-clean:
 	rm -rf html latex
 	echo Done.
@@ -797,7 +799,8 @@ docs-clean:
 CFLOWFLAGS=-l  -b --omit-arguments
 cflow:
 	(cflow $(CFLOWFLAGS) -D$(PART) $(addprefix -I ,${INCLUDEPATH}) $(SRCFILES) 2>&1) | egrep -v "^cflow"
-
+
+
 # These symbols are not files (or directories)
 .PHONY: nm edit debug terminal term doxygen docs docs-clean cflow
 .PHONY: default all clean flash burn deploy disassembly dump size

@@ -65,7 +65,7 @@ PREFIX:=arm-none-eabi
 #
 # Gecko_SDK DIr
 #
-GECKOSDKDIR=../../Gecko_SDK-5.1.2
+GECKOSDKDIR=../../Gecko_SDK
 
 #
 # CMSIS Dir
