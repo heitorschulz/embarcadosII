@@ -1,0 +1,8 @@
+uart.c:38:6:UART_Reset	4	static
+uart.c:57:6:UART_Init	16	static
+uart.c:113:10:UART_GetStatus	16	static
+uart.c:120:6:UART_SendChar	16	static
+uart.c:127:6:UART_SendString	16	static
+uart.c:134:10:UART_GetCharNoWait	8	static
+uart.c:141:10:UART_GetChar	8	static
+uart.c:147:6:UART_GetString	24	static

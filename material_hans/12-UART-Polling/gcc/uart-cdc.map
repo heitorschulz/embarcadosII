@@ -1,0 +1,420 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+SystemCoreClock     0x4               gcc/system_efm32gg.o
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 gcc/clock_efm32gg_ext.o
+ .data          0x0000000000000000        0x0 gcc/clock_efm32gg_ext.o
+ .bss           0x0000000000000000        0x0 gcc/clock_efm32gg_ext.o
+ .text.ClockSetHFClockDivisor
+                0x0000000000000000       0x60 gcc/clock_efm32gg_ext.o
+ .text.ClockSetPrescalers
+                0x0000000000000000       0xb0 gcc/clock_efm32gg_ext.o
+ .text.ClockSetLFCLKA
+                0x0000000000000000      0x120 gcc/clock_efm32gg_ext.o
+ .text.ClockSetLFCLKB
+                0x0000000000000000      0x120 gcc/clock_efm32gg_ext.o
+ .text.ClockGetCoreClockFrequency
+                0x0000000000000000       0x18 gcc/clock_efm32gg_ext.o
+ .text          0x0000000000000000        0x0 gcc/uart.o
+ .data          0x0000000000000000        0x0 gcc/uart.o
+ .bss           0x0000000000000000        0x0 gcc/uart.o
+ .rodata.BAUD   0x0000000000000000        0x4 gcc/uart.o
+ .rodata.OVERSAMPLING
+                0x0000000000000000        0x4 gcc/uart.o
+ .rodata.GPIOE  0x0000000000000000        0x4 gcc/uart.o
+ .rodata.GPIOF  0x0000000000000000        0x4 gcc/uart.o
+ .text.UART_SendString
+                0x0000000000000000       0x2a gcc/uart.o
+ .text.UART_GetChar
+                0x0000000000000000       0x20 gcc/uart.o
+ .text.UART_GetString
+                0x0000000000000000       0x44 gcc/uart.o
+ .text          0x0000000000000000        0x0 gcc/startup_efm32gg.o
+ .data          0x0000000000000000        0x0 gcc/startup_efm32gg.o
+ .bss           0x0000000000000000        0x0 gcc/startup_efm32gg.o
+ .text.SystemInit
+                0x0000000000000000        0xc gcc/startup_efm32gg.o
+ .text          0x0000000000000000        0x0 gcc/main.o
+ .data          0x0000000000000000        0x0 gcc/main.o
+ .bss           0x0000000000000000        0x0 gcc/main.o
+ .rodata.TickDivisor
+                0x0000000000000000        0x4 gcc/main.o
+ .text          0x0000000000000000        0x0 gcc/led.o
+ .data          0x0000000000000000        0x0 gcc/led.o
+ .bss           0x0000000000000000        0x0 gcc/led.o
+ .rodata.GPIOE  0x0000000000000000        0x4 gcc/led.o
+ .text.LED_On   0x0000000000000000       0x24 gcc/led.o
+ .text          0x0000000000000000        0x0 gcc/system_efm32gg.o
+ .data          0x0000000000000000        0x0 gcc/system_efm32gg.o
+ .bss           0x0000000000000000        0x0 gcc/system_efm32gg.o
+ .text.SystemMaxCoreClockGet
+                0x0000000000000000       0x14 gcc/system_efm32gg.o
+ .text.SystemHFXOClockGet
+                0x0000000000000000       0x14 gcc/system_efm32gg.o
+ .text.SystemHFXOClockSet
+                0x0000000000000000       0x30 gcc/system_efm32gg.o
+ .text.SystemLFRCOClockGet
+                0x0000000000000000       0x10 gcc/system_efm32gg.o
+ .text.SystemULFRCOClockGet
+                0x0000000000000000       0x10 gcc/system_efm32gg.o
+ .text.SystemLFXOClockGet
+                0x0000000000000000       0x14 gcc/system_efm32gg.o
+ .text.SystemLFXOClockSet
+                0x0000000000000000       0x30 gcc/system_efm32gg.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000000000000 0x0000000000100000 xr
+RAM              0x0000000020000000 0x0000000000020000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD gcc/clock_efm32gg_ext.o
+LOAD gcc/uart.o
+LOAD gcc/startup_efm32gg.o
+LOAD gcc/main.o
+LOAD gcc/led.o
+LOAD gcc/system_efm32gg.o
+LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a
+LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a
+LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/libgcc.a
+START GROUP
+LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/libgcc.a
+LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg_nano.a
+LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a
+END GROUP
+START GROUP
+LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/libgcc.a
+LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a
+END GROUP
+
+.text           0x0000000000000000      0xcc8
+ *(.vectors)
+ .vectors       0x0000000000000000       0xdc gcc/startup_efm32gg.o
+                0x0000000000000000                __Vectors
+                0x00000000000000dc                __Vectors_End = .
+                0x00000000000000dc                __Vectors_Size = (__Vectors_End - __Vectors)
+                0x0000000020000010                __end__ = .
+ *(.text*)
+ .text.SystemCoreClockUpdate
+                0x00000000000000dc        0xc gcc/clock_efm32gg_ext.o
+ .text.GetProdRev
+                0x00000000000000e8       0x18 gcc/clock_efm32gg_ext.o
+ .text.nearestpower2exp
+                0x0000000000000100       0x6c gcc/clock_efm32gg_ext.o
+ .text.SystemCoreClockSet
+                0x000000000000016c      0x2f0 gcc/clock_efm32gg_ext.o
+                0x000000000000016c                SystemCoreClockSet
+ .text.ClockGetConfiguration
+                0x000000000000045c      0x1b8 gcc/clock_efm32gg_ext.o
+                0x000000000000045c                ClockGetConfiguration
+ .text.ClockConfigureForFrequency
+                0x0000000000000614       0x98 gcc/clock_efm32gg_ext.o
+                0x0000000000000614                ClockConfigureForFrequency
+ .text.ClockGetPeripheralClockFrequency
+                0x00000000000006ac       0x18 gcc/clock_efm32gg_ext.o
+                0x00000000000006ac                ClockGetPeripheralClockFrequency
+ .text.UART_Reset
+                0x00000000000006c4       0x54 gcc/uart.o
+                0x00000000000006c4                UART_Reset
+ .text.UART_Init
+                0x0000000000000718      0x110 gcc/uart.o
+                0x0000000000000718                UART_Init
+ .text.UART_GetStatus
+                0x0000000000000828       0x1c gcc/uart.o
+                0x0000000000000828                UART_GetStatus
+ .text.UART_SendChar
+                0x0000000000000844       0x2c gcc/uart.o
+                0x0000000000000844                UART_SendChar
+ .text.UART_GetCharNoWait
+                0x0000000000000870       0x24 gcc/uart.o
+                0x0000000000000870                UART_GetCharNoWait
+ .text.Reset_Handler
+                0x0000000000000894       0x50 gcc/startup_efm32gg.o
+                0x0000000000000894                Reset_Handler
+ .text._main    0x00000000000008e4        0xc gcc/startup_efm32gg.o
+                0x00000000000008e4                _main
+ .text.Default_Handler
+                0x00000000000008f0        0x6 gcc/startup_efm32gg.o
+                0x00000000000008f0                TIMER2_IRQHandler
+                0x00000000000008f0                DebugMon_Handler
+                0x00000000000008f0                USART0_TX_IRQHandler
+                0x00000000000008f0                I2C0_IRQHandler
+                0x00000000000008f0                HardFault_Handler
+                0x00000000000008f0                LEUART1_IRQHandler
+                0x00000000000008f0                USART1_RX_IRQHandler
+                0x00000000000008f0                PendSV_Handler
+                0x00000000000008f0                NMI_Handler
+                0x00000000000008f0                I2C1_IRQHandler
+                0x00000000000008f0                TIMER3_IRQHandler
+                0x00000000000008f0                USART1_TX_IRQHandler
+                0x00000000000008f0                MSC_IRQHandler
+                0x00000000000008f0                ADC0_IRQHandler
+                0x00000000000008f0                UsageFault_Handler
+                0x00000000000008f0                LEUART0_IRQHandler
+                0x00000000000008f0                GPIO_EVEN_IRQHandler
+                0x00000000000008f0                UART0_TX_IRQHandler
+                0x00000000000008f0                UART1_TX_IRQHandler
+                0x00000000000008f0                RTC_IRQHandler
+                0x00000000000008f0                TIMER0_IRQHandler
+                0x00000000000008f0                LCD_IRQHandler
+                0x00000000000008f0                PCNT2_IRQHandler
+                0x00000000000008f0                UART0_RX_IRQHandler
+                0x00000000000008f0                LETIMER0_IRQHandler
+                0x00000000000008f0                TIMER1_IRQHandler
+                0x00000000000008f0                USART2_RX_IRQHandler
+                0x00000000000008f0                Default_Handler
+                0x00000000000008f0                EMU_IRQHandler
+                0x00000000000008f0                PCNT0_IRQHandler
+                0x00000000000008f0                USB_IRQHandler
+                0x00000000000008f0                BURTC_IRQHandler
+                0x00000000000008f0                PCNT1_IRQHandler
+                0x00000000000008f0                ACMP0_IRQHandler
+                0x00000000000008f0                USART0_RX_IRQHandler
+                0x00000000000008f0                MemManage_Handler
+                0x00000000000008f0                SVC_Handler
+                0x00000000000008f0                DAC0_IRQHandler
+                0x00000000000008f0                UART1_RX_IRQHandler
+                0x00000000000008f0                CMU_IRQHandler
+                0x00000000000008f0                EBI_IRQHandler
+                0x00000000000008f0                LESENSE_IRQHandler
+                0x00000000000008f0                GPIO_ODD_IRQHandler
+                0x00000000000008f0                AES_IRQHandler
+                0x00000000000008f0                VCMP_IRQHandler
+                0x00000000000008f0                DMA_IRQHandler
+                0x00000000000008f0                BusFault_Handler
+                0x00000000000008f0                USART2_TX_IRQHandler
+ *fill*         0x00000000000008f6        0x2 
+ .text.NVIC_SetPriority
+                0x00000000000008f8       0x54 gcc/main.o
+ .text.SysTick_Config
+                0x000000000000094c       0x44 gcc/main.o
+ .text.SysTick_Handler
+                0x0000000000000990       0x2c gcc/main.o
+                0x0000000000000990                SysTick_Handler
+ .text.main     0x00000000000009bc       0xac gcc/main.o
+                0x00000000000009bc                main
+ .text.LED_Init
+                0x0000000000000a68       0x7c gcc/led.o
+                0x0000000000000a68                LED_Init
+ .text.LED_Off  0x0000000000000ae4       0x24 gcc/led.o
+                0x0000000000000ae4                LED_Off
+ .text.LED_Toggle
+                0x0000000000000b08       0x24 gcc/led.o
+                0x0000000000000b08                LED_Toggle
+ .text.LED_Write
+                0x0000000000000b2c       0x2c gcc/led.o
+                0x0000000000000b2c                LED_Write
+ .text.GetProdRev
+                0x0000000000000b58       0x18 gcc/system_efm32gg.o
+ .text.SystemCoreClockGet
+                0x0000000000000b70       0x34 gcc/system_efm32gg.o
+                0x0000000000000b70                SystemCoreClockGet
+ .text.SystemHFClockGet
+                0x0000000000000ba4      0x118 gcc/system_efm32gg.o
+                0x0000000000000ba4                SystemHFClockGet
+ .text.SystemInit
+                0x0000000000000cbc        0xc gcc/system_efm32gg.o
+                0x0000000000000cbc                SystemInit
+ *(.init)
+ *(.fini)
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+ *(.rodata*)
+ *(.eh_frame*)
+
+.glue_7         0x0000000000000cc8        0x0
+ .glue_7        0x0000000000000cc8        0x0 linker stubs
+
+.glue_7t        0x0000000000000cc8        0x0
+ .glue_7t       0x0000000000000cc8        0x0 linker stubs
+
+.vfp11_veneer   0x0000000000000cc8        0x0
+ .vfp11_veneer  0x0000000000000cc8        0x0 linker stubs
+
+.v4_bx          0x0000000000000cc8        0x0
+ .v4_bx         0x0000000000000cc8        0x0 linker stubs
+
+.iplt           0x0000000000000cc8        0x0
+ .iplt          0x0000000000000cc8        0x0 gcc/clock_efm32gg_ext.o
+
+.rel.dyn        0x0000000000000cc8        0x0
+ .rel.iplt      0x0000000000000cc8        0x0 gcc/clock_efm32gg_ext.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x0000000000000cc8                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x0000000000000cc8                __exidx_end = .
+                0x0000000000000cc8                __etext = .
+
+.data           0x0000000020000000        0x8 load address 0x0000000000000cc8
+                0x0000000020000000                __data_start__ = .
+ *(vtable)
+ *(.data*)
+ .data.SystemHFXOClock
+                0x0000000020000000        0x4 gcc/system_efm32gg.o
+ .data.SystemLFXOClock
+                0x0000000020000004        0x4 gcc/system_efm32gg.o
+                0x0000000020000008                . = ALIGN (0x4)
+ *(.ram)
+                0x0000000020000008                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end = .)
+                0x0000000020000008                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__init_array_start = .)
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array)
+                [!provide]                        PROVIDE (__init_array_end = .)
+                0x0000000020000008                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_NAME(.fini_array.*))
+ *(.fini_array)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+ *(.jcr*)
+                0x0000000020000008                . = ALIGN (0x4)
+                0x0000000020000008                __data_end__ = .
+
+.igot.plt       0x0000000020000008        0x0 load address 0x0000000000000cd0
+ .igot.plt      0x0000000020000008        0x0 gcc/clock_efm32gg_ext.o
+
+.bss            0x0000000020000008        0x8 load address 0x0000000000000cd0
+                0x0000000020000008                . = ALIGN (0x4)
+                0x0000000020000008                __bss_start__ = .
+ *(.bss*)
+ .bss.counter.5446
+                0x0000000020000008        0x4 gcc/main.o
+ *(COMMON)
+ COMMON         0x000000002000000c        0x4 gcc/system_efm32gg.o
+                0x000000002000000c                SystemCoreClock
+                0x0000000020000010                . = ALIGN (0x4)
+                0x0000000020000010                __bss_end__ = .
+
+.heap           0x0000000020000010      0xc00
+                0x0000000020000010                __HeapBase = .
+                0x0000000020000010                __end__ = .
+                0x0000000020000010                end = __end__
+                0x0000000020000010                _end = __end__
+ *(.heap*)
+ .heap          0x0000000020000010      0xc00 gcc/startup_efm32gg.o
+                0x0000000020000c10                __HeapLimit = .
+
+.stack_dummy    0x0000000020000c10      0x400
+ *(.stack*)
+ .stack         0x0000000020000c10      0x400 gcc/startup_efm32gg.o
+                0x0000000020020000                __StackTop = (ORIGIN (RAM) + LENGTH (RAM))
+                0x000000002001fc00                __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
+                [!provide]                        PROVIDE (__stack = __StackTop)
+                0x0000000000000001                ASSERT ((__StackLimit >= __HeapLimit), region RAM overflowed with stack)
+                0x0000000000000001                ASSERT ((LENGTH (FLASH) >= (__etext + SIZEOF (.data))), FLASH memory overflowed !)
+OUTPUT(gcc/uart-cdc.axf elf32-littlearm)
+LOAD linker stubs
+
+.debug_info     0x0000000000000000     0x23a4
+ .debug_info    0x0000000000000000      0x964 gcc/clock_efm32gg_ext.o
+ .debug_info    0x0000000000000964      0x70b gcc/uart.o
+ .debug_info    0x000000000000106f      0x1f9 gcc/startup_efm32gg.o
+ .debug_info    0x0000000000001268      0x706 gcc/main.o
+ .debug_info    0x000000000000196e      0x52c gcc/led.o
+ .debug_info    0x0000000000001e9a      0x50a gcc/system_efm32gg.o
+
+.debug_abbrev   0x0000000000000000      0x992
+ .debug_abbrev  0x0000000000000000      0x205 gcc/clock_efm32gg_ext.o
+ .debug_abbrev  0x0000000000000205      0x1a0 gcc/uart.o
+ .debug_abbrev  0x00000000000003a5       0xfb gcc/startup_efm32gg.o
+ .debug_abbrev  0x00000000000004a0      0x207 gcc/main.o
+ .debug_abbrev  0x00000000000006a7      0x153 gcc/led.o
+ .debug_abbrev  0x00000000000007fa      0x198 gcc/system_efm32gg.o
+
+.debug_aranges  0x0000000000000000      0x1f0
+ .debug_aranges
+                0x0000000000000000       0x78 gcc/clock_efm32gg_ext.o
+ .debug_aranges
+                0x0000000000000078       0x58 gcc/uart.o
+ .debug_aranges
+                0x00000000000000d0       0x38 gcc/startup_efm32gg.o
+ .debug_aranges
+                0x0000000000000108       0x38 gcc/main.o
+ .debug_aranges
+                0x0000000000000140       0x40 gcc/led.o
+ .debug_aranges
+                0x0000000000000180       0x70 gcc/system_efm32gg.o
+
+.debug_ranges   0x0000000000000000      0x190
+ .debug_ranges  0x0000000000000000       0x68 gcc/clock_efm32gg_ext.o
+ .debug_ranges  0x0000000000000068       0x48 gcc/uart.o
+ .debug_ranges  0x00000000000000b0       0x28 gcc/startup_efm32gg.o
+ .debug_ranges  0x00000000000000d8       0x28 gcc/main.o
+ .debug_ranges  0x0000000000000100       0x30 gcc/led.o
+ .debug_ranges  0x0000000000000130       0x60 gcc/system_efm32gg.o
+
+.debug_line     0x0000000000000000     0x11a0
+ .debug_line    0x0000000000000000      0x74f gcc/clock_efm32gg_ext.o
+ .debug_line    0x000000000000074f      0x301 gcc/uart.o
+ .debug_line    0x0000000000000a50       0xf0 gcc/startup_efm32gg.o
+ .debug_line    0x0000000000000b40      0x1f8 gcc/main.o
+ .debug_line    0x0000000000000d38      0x1b8 gcc/led.o
+ .debug_line    0x0000000000000ef0      0x2b0 gcc/system_efm32gg.o
+
+.debug_str      0x0000000000000000      0xd1f
+ .debug_str     0x0000000000000000      0x5ea gcc/clock_efm32gg_ext.o
+                                        0x653 (size before relaxing)
+ .debug_str     0x00000000000005ea      0x1c0 gcc/uart.o
+                                        0x490 (size before relaxing)
+ .debug_str     0x00000000000007aa       0xfc gcc/startup_efm32gg.o
+                                        0x291 (size before relaxing)
+ .debug_str     0x00000000000008a6      0x361 gcc/main.o
+                                        0x68d (size before relaxing)
+ .debug_str     0x0000000000000c07       0x38 gcc/led.o
+                                        0x39a (size before relaxing)
+ .debug_str     0x0000000000000c3f       0xe0 gcc/system_efm32gg.o
+                                        0x45e (size before relaxing)
+
+.comment        0x0000000000000000       0x59
+ .comment       0x0000000000000000       0x59 gcc/clock_efm32gg_ext.o
+                                         0x5a (size before relaxing)
+ .comment       0x0000000000000059       0x5a gcc/uart.o
+ .comment       0x0000000000000059       0x5a gcc/startup_efm32gg.o
+ .comment       0x0000000000000059       0x5a gcc/main.o
+ .comment       0x0000000000000059       0x5a gcc/led.o
+ .comment       0x0000000000000059       0x5a gcc/system_efm32gg.o
+
+.ARM.attributes
+                0x0000000000000000       0x2d
+ .ARM.attributes
+                0x0000000000000000       0x2d gcc/clock_efm32gg_ext.o
+ .ARM.attributes
+                0x000000000000002d       0x2d gcc/uart.o
+ .ARM.attributes
+                0x000000000000005a       0x2d gcc/startup_efm32gg.o
+ .ARM.attributes
+                0x0000000000000087       0x2d gcc/main.o
+ .ARM.attributes
+                0x00000000000000b4       0x2d gcc/led.o
+ .ARM.attributes
+                0x00000000000000e1       0x2d gcc/system_efm32gg.o
+
+.debug_frame    0x0000000000000000      0x64c
+ .debug_frame   0x0000000000000000      0x1c8 gcc/clock_efm32gg_ext.o
+ .debug_frame   0x00000000000001c8      0x120 gcc/uart.o
+ .debug_frame   0x00000000000002e8       0x78 gcc/startup_efm32gg.o
+ .debug_frame   0x0000000000000360       0x98 gcc/main.o
+ .debug_frame   0x00000000000003f8       0xd4 gcc/led.o
+ .debug_frame   0x00000000000004cc      0x180 gcc/system_efm32gg.o

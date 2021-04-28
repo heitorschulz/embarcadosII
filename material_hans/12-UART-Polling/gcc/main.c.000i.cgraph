@@ -1,0 +1,1269 @@
+Trivially needed symbols: main SysTick_Handler TickDivisor
+Trivially needed symbols: counter
+
+
+Initial Symbol table:
+
+UART_SendChar/76 (UART_SendChar) @0x7f713f552ca8
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 main/66 main/66 
+  Calls: 
+UART_GetCharNoWait/75 (UART_GetCharNoWait) @0x7f713f552b40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+UART_Init/74 (UART_Init) @0x7f713f5529d8
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+SystemCoreClock/73 (SystemCoreClock) @0x7f713f551c00
+  Type: variable
+  Visibility: external public common
+  References: 
+  Referring: main/66 (read)
+  Availability: not-ready
+  Varpool flags:
+LED_Write/72 (LED_Write) @0x7f713f552870
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+ClockGetConfiguration/71 (ClockGetConfiguration) @0x7f713f552708
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+SystemCoreClockSet/70 (SystemCoreClockSet) @0x7f713f5525a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+LED_Init/69 (LED_Init) @0x7f713f552438
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+LED_Toggle/68 (LED_Toggle) @0x7f713f5522d0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 SysTick_Handler/65 
+  Calls: 
+counter/67 (counter) @0x7f713f551500
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder
+  Aux: @0x7f713f552168
+  References: 
+  Referring: SysTick_Handler/65 (read)SysTick_Handler/65 (write)SysTick_Handler/65 (read)SysTick_Handler/65 (write)
+  Availability: not-ready
+  Varpool flags: initialized
+main/66 (main) @0x7f713f552168
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  Aux: @0x1796a00
+  References: SystemCoreClock/73 (read)
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: UART_SendChar/76 UART_SendChar/76 UART_SendChar/76 LED_Toggle/68 UART_GetCharNoWait/75 UART_Init/74 SysTick_Config/59 LED_Write/72 ClockGetConfiguration/71 SystemCoreClockSet/70 LED_Init/69 
+SysTick_Handler/65 (SysTick_Handler) @0x7f713f552000
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  Aux: @0x7f713f552168
+  References: counter/67 (read)counter/67 (write)counter/67 (read)counter/67 (write)
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: LED_Toggle/68 
+TickDivisor/64 (TickDivisor) @0x7f713f551200
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder public
+  Aux: @0x7f713f552000
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SystemCoreClockUpdate/63 (SystemCoreClockUpdate) @0x7f713f9162d0
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ITM_CheckChar/62 (ITM_CheckChar) @0x7f713f916000
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ITM_ReceiveChar/61 (ITM_ReceiveChar) @0x7f713f909e10
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ITM_SendChar/60 (ITM_SendChar) @0x7f713f909ca8
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+SysTick_Config/59 (SysTick_Config) @0x7f713f9099d8
+  Type: function definition analyzed
+  Visibility: no_reorder
+  Aux: @0x1796a00
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: main/66 
+  Calls: NVIC_SetPriority/54 
+NVIC_SystemReset/58 (NVIC_SystemReset) @0x7f713f909870
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+NVIC_DecodePriority/57 (NVIC_DecodePriority) @0x7f713f909708
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+NVIC_EncodePriority/56 (NVIC_EncodePriority) @0x7f713f9095a0
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+NVIC_GetPriority/55 (NVIC_GetPriority) @0x7f713f909438
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+NVIC_SetPriority/54 (NVIC_SetPriority) @0x7f713f9092d0
+  Type: function definition analyzed
+  Visibility: no_reorder
+  Aux: @0x1796a00
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: SysTick_Config/59 
+  Calls: 
+NVIC_GetActive/53 (NVIC_GetActive) @0x7f713f909168
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+NVIC_ClearPendingIRQ/52 (NVIC_ClearPendingIRQ) @0x7f713f909000
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+NVIC_SetPendingIRQ/51 (NVIC_SetPendingIRQ) @0x7f713f8fce10
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+NVIC_GetPendingIRQ/50 (NVIC_GetPendingIRQ) @0x7f713f8fcca8
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+NVIC_DisableIRQ/49 (NVIC_DisableIRQ) @0x7f713f8fcb40
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+NVIC_EnableIRQ/48 (NVIC_EnableIRQ) @0x7f713f8fc9d8
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+NVIC_GetPriorityGrouping/47 (NVIC_GetPriorityGrouping) @0x7f713f8fc870
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+NVIC_SetPriorityGrouping/46 (NVIC_SetPriorityGrouping) @0x7f713f8fc708
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STRT/45 (__STRT) @0x7f713f8b52d0
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STRHT/44 (__STRHT) @0x7f713f8b5168
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STRBT/43 (__STRBT) @0x7f713f8b5000
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDRT/42 (__LDRT) @0x7f713f8aae10
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDRHT/41 (__LDRHT) @0x7f713f8aaca8
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDRBT/40 (__LDRBT) @0x7f713f8aab40
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__RRX/39 (__RRX) @0x7f713f8aa9d8
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__CLREX/38 (__CLREX) @0x7f713f8aa870
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STREXW/37 (__STREXW) @0x7f713f8aa708
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STREXH/36 (__STREXH) @0x7f713f8aa5a0
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STREXB/35 (__STREXB) @0x7f713f8aa438
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDREXW/34 (__LDREXW) @0x7f713f8aa2d0
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDREXH/33 (__LDREXH) @0x7f713f8aa168
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDREXB/32 (__LDREXB) @0x7f713f8aa000
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__RBIT/31 (__RBIT) @0x7f713f8a1e10
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__ROR/30 (__ROR) @0x7f713f8a1ca8
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__REVSH/29 (__REVSH) @0x7f713f8a1b40
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__REV16/28 (__REV16) @0x7f713f8a19d8
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__REV/27 (__REV) @0x7f713f8a1870
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__DMB/26 (__DMB) @0x7f713f8a1708
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__DSB/25 (__DSB) @0x7f713f8a15a0
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__ISB/24 (__ISB) @0x7f713f8a1438
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SEV/23 (__SEV) @0x7f713f8a12d0
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__WFE/22 (__WFE) @0x7f713f8a1168
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__WFI/21 (__WFI) @0x7f713f8a1000
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NOP/20 (__NOP) @0x7f713f89ee10
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_FAULTMASK/19 (__set_FAULTMASK) @0x7f713f89eca8
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_FAULTMASK/18 (__get_FAULTMASK) @0x7f713f89eb40
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_BASEPRI_MAX/17 (__set_BASEPRI_MAX) @0x7f713f89e9d8
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_BASEPRI/16 (__set_BASEPRI) @0x7f713f89e870
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_BASEPRI/15 (__get_BASEPRI) @0x7f713f89e708
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__disable_fault_irq/14 (__disable_fault_irq) @0x7f713f89e5a0
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__enable_fault_irq/13 (__enable_fault_irq) @0x7f713f89e438
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_PRIMASK/12 (__set_PRIMASK) @0x7f713f89e2d0
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_PRIMASK/11 (__get_PRIMASK) @0x7f713f89e168
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_MSP/10 (__set_MSP) @0x7f713f89e000
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_MSP/9 (__get_MSP) @0x7f713f88fe10
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_PSP/8 (__set_PSP) @0x7f713f88fca8
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_PSP/7 (__get_PSP) @0x7f713f88fb40
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_xPSR/6 (__get_xPSR) @0x7f713f88f9d8
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_APSR/5 (__get_APSR) @0x7f713f88f870
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_IPSR/4 (__get_IPSR) @0x7f713f88f708
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_CONTROL/3 (__set_CONTROL) @0x7f713f88f5a0
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_CONTROL/2 (__get_CONTROL) @0x7f713f88f438
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__disable_irq/1 (__disable_irq) @0x7f713f88f2d0
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__enable_irq/0 (__enable_irq) @0x7f713f88f168
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: SystemCoreClockUpdate ITM_CheckChar ITM_ReceiveChar ITM_SendChar NVIC_SystemReset NVIC_DecodePriority NVIC_EncodePriority NVIC_GetPriority NVIC_GetActive NVIC_ClearPendingIRQ NVIC_SetPendingIRQ NVIC_GetPendingIRQ NVIC_DisableIRQ NVIC_EnableIRQ NVIC_GetPriorityGrouping NVIC_SetPriorityGrouping __STRT __STRHT __STRBT __LDRT __LDRHT __LDRBT __RRX __CLREX __STREXW __STREXH __STREXB __LDREXW __LDREXH __LDREXB __RBIT __ROR __REVSH __REV16 __REV __DMB __DSB __ISB __SEV __WFE __WFI __NOP __set_FAULTMASK __get_FAULTMASK __set_BASEPRI_MAX __set_BASEPRI __get_BASEPRI __disable_fault_irq __enable_fault_irq __set_PRIMASK __get_PRIMASK __set_MSP __get_MSP __set_PSP __get_PSP __get_xPSR __get_APSR __get_IPSR __set_CONTROL __get_CONTROL __disable_irq __enable_irq
+
+Reclaimed Symbol table:
+
+UART_SendChar/76 (UART_SendChar) @0x7f713f552ca8
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 main/66 main/66 
+  Calls: 
+UART_GetCharNoWait/75 (UART_GetCharNoWait) @0x7f713f552b40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+UART_Init/74 (UART_Init) @0x7f713f5529d8
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+SystemCoreClock/73 (SystemCoreClock) @0x7f713f551c00
+  Type: variable
+  Visibility: external public common
+  References: 
+  Referring: main/66 (read)
+  Availability: not-ready
+  Varpool flags:
+LED_Write/72 (LED_Write) @0x7f713f552870
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+ClockGetConfiguration/71 (ClockGetConfiguration) @0x7f713f552708
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+SystemCoreClockSet/70 (SystemCoreClockSet) @0x7f713f5525a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+LED_Init/69 (LED_Init) @0x7f713f552438
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+LED_Toggle/68 (LED_Toggle) @0x7f713f5522d0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 SysTick_Handler/65 
+  Calls: 
+counter/67 (counter) @0x7f713f551500
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder
+  References: 
+  Referring: SysTick_Handler/65 (read)SysTick_Handler/65 (write)SysTick_Handler/65 (read)SysTick_Handler/65 (write)
+  Availability: not-ready
+  Varpool flags: initialized
+main/66 (main) @0x7f713f552168
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: SystemCoreClock/73 (read)
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: UART_SendChar/76 UART_SendChar/76 UART_SendChar/76 LED_Toggle/68 UART_GetCharNoWait/75 UART_Init/74 SysTick_Config/59 LED_Write/72 ClockGetConfiguration/71 SystemCoreClockSet/70 LED_Init/69 
+SysTick_Handler/65 (SysTick_Handler) @0x7f713f552000
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: counter/67 (read)counter/67 (write)counter/67 (read)counter/67 (write)
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: LED_Toggle/68 
+TickDivisor/64 (TickDivisor) @0x7f713f551200
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder public
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SysTick_Config/59 (SysTick_Config) @0x7f713f9099d8
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: main/66 
+  Calls: NVIC_SetPriority/54 
+NVIC_SetPriority/54 (NVIC_SetPriority) @0x7f713f9092d0
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: SysTick_Config/59 
+  Calls: 
+
+
+Initial Symbol table:
+
+UART_SendChar/76 (UART_SendChar) @0x7f713f552ca8
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 main/66 main/66 
+  Calls: 
+UART_GetCharNoWait/75 (UART_GetCharNoWait) @0x7f713f552b40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+UART_Init/74 (UART_Init) @0x7f713f5529d8
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+SystemCoreClock/73 (SystemCoreClock) @0x7f713f551c00
+  Type: variable
+  Visibility: external public common
+  References: 
+  Referring: main/66 (read)
+  Availability: not-ready
+  Varpool flags:
+LED_Write/72 (LED_Write) @0x7f713f552870
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+ClockGetConfiguration/71 (ClockGetConfiguration) @0x7f713f552708
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+SystemCoreClockSet/70 (SystemCoreClockSet) @0x7f713f5525a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+LED_Init/69 (LED_Init) @0x7f713f552438
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+LED_Toggle/68 (LED_Toggle) @0x7f713f5522d0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 SysTick_Handler/65 
+  Calls: 
+counter.5446/67 (counter) @0x7f713f551500
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder
+  References: 
+  Referring: SysTick_Handler/65 (read)SysTick_Handler/65 (write)SysTick_Handler/65 (read)SysTick_Handler/65 (write)
+  Availability: not-ready
+  Varpool flags: initialized
+main/66 (main) @0x7f713f552168
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: SystemCoreClock/73 (read)
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: UART_SendChar/76 UART_SendChar/76 UART_SendChar/76 LED_Toggle/68 UART_GetCharNoWait/75 UART_Init/74 SysTick_Config/59 LED_Write/72 ClockGetConfiguration/71 SystemCoreClockSet/70 LED_Init/69 
+SysTick_Handler/65 (SysTick_Handler) @0x7f713f552000
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: counter.5446/67 (read)counter.5446/67 (write)counter.5446/67 (read)counter.5446/67 (write)
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: LED_Toggle/68 
+TickDivisor/64 (TickDivisor) @0x7f713f551200
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder public
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SysTick_Config/59 (SysTick_Config) @0x7f713f9099d8
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: main/66 
+  Calls: NVIC_SetPriority/54 
+NVIC_SetPriority/54 (NVIC_SetPriority) @0x7f713f9092d0
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: SysTick_Config/59 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+UART_SendChar/76 (UART_SendChar) @0x7f713f552ca8
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 main/66 main/66 
+  Calls: 
+UART_GetCharNoWait/75 (UART_GetCharNoWait) @0x7f713f552b40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+UART_Init/74 (UART_Init) @0x7f713f5529d8
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+SystemCoreClock/73 (SystemCoreClock) @0x7f713f551c00
+  Type: variable
+  Visibility: external public common
+  References: 
+  Referring: main/66 (read)
+  Availability: not-ready
+  Varpool flags:
+LED_Write/72 (LED_Write) @0x7f713f552870
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+ClockGetConfiguration/71 (ClockGetConfiguration) @0x7f713f552708
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+SystemCoreClockSet/70 (SystemCoreClockSet) @0x7f713f5525a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+LED_Init/69 (LED_Init) @0x7f713f552438
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 
+  Calls: 
+LED_Toggle/68 (LED_Toggle) @0x7f713f5522d0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/66 SysTick_Handler/65 
+  Calls: 
+counter.5446/67 (counter) @0x7f713f551500
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder
+  References: 
+  Referring: SysTick_Handler/65 (read)SysTick_Handler/65 (write)SysTick_Handler/65 (read)SysTick_Handler/65 (write)
+  Availability: not-ready
+  Varpool flags: initialized
+main/66 (main) @0x7f713f552168
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: SystemCoreClock/73 (read)
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: UART_SendChar/76 UART_SendChar/76 UART_SendChar/76 LED_Toggle/68 UART_GetCharNoWait/75 UART_Init/74 SysTick_Config/59 LED_Write/72 ClockGetConfiguration/71 SystemCoreClockSet/70 LED_Init/69 
+SysTick_Handler/65 (SysTick_Handler) @0x7f713f552000
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: counter.5446/67 (read)counter.5446/67 (write)counter.5446/67 (read)counter.5446/67 (write)
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: LED_Toggle/68 
+TickDivisor/64 (TickDivisor) @0x7f713f551200
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder public
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SysTick_Config/59 (SysTick_Config) @0x7f713f9099d8
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: main/66 
+  Calls: NVIC_SetPriority/54 
+NVIC_SetPriority/54 (NVIC_SetPriority) @0x7f713f9092d0
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: SysTick_Config/59 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+UART_SendChar/76 (UART_SendChar) @0x7f713f552ca8
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: main/66 main/66 main/66 
+  Calls: 
+UART_GetCharNoWait/75 (UART_GetCharNoWait) @0x7f713f552b40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: main/66 
+  Calls: 
+UART_Init/74 (UART_Init) @0x7f713f5529d8
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: main/66 
+  Calls: 
+SystemCoreClock/73 (SystemCoreClock) @0x7f713f551c00
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public common
+  References: 
+  Referring: main/66 (read)
+  Availability: not_available
+  Varpool flags:
+LED_Write/72 (LED_Write) @0x7f713f552870
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: main/66 
+  Calls: 
+ClockGetConfiguration/71 (ClockGetConfiguration) @0x7f713f552708
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: main/66 
+  Calls: 
+SystemCoreClockSet/70 (SystemCoreClockSet) @0x7f713f5525a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: main/66 
+  Calls: 
+LED_Init/69 (LED_Init) @0x7f713f552438
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: main/66 
+  Calls: 
+LED_Toggle/68 (LED_Toggle) @0x7f713f5522d0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: main/66 SysTick_Handler/65 
+  Calls: 
+counter.5446/67 (counter) @0x7f713f551500
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder prevailing_def_ironly
+  References: 
+  Referring: SysTick_Handler/65 (read)SysTick_Handler/65 (write)SysTick_Handler/65 (read)SysTick_Handler/65 (write)
+  Availability: available
+  Varpool flags: initialized
+main/66 (main) @0x7f713f552168
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: SystemCoreClock/73 (read)
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: UART_SendChar/76 UART_SendChar/76 UART_SendChar/76 LED_Toggle/68 UART_GetCharNoWait/75 UART_Init/74 SysTick_Config/59 LED_Write/72 ClockGetConfiguration/71 SystemCoreClockSet/70 LED_Init/69 
+SysTick_Handler/65 (SysTick_Handler) @0x7f713f552000
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: counter.5446/67 (read)counter.5446/67 (write)counter.5446/67 (read)counter.5446/67 (write)
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: LED_Toggle/68 
+TickDivisor/64 (TickDivisor) @0x7f713f551200
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+SysTick_Config/59 (SysTick_Config) @0x7f713f9099d8
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: body local
+  Called by: main/66 
+  Calls: NVIC_SetPriority/54 
+NVIC_SetPriority/54 (NVIC_SetPriority) @0x7f713f9092d0
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: body local
+  Called by: SysTick_Config/59 
+  Calls: 
+Materializing clones
+Materialization Call site updates done.
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Trivially needed variables: counter.5446 TickDivisor
+Removing variables:
+
+Final Symbol table:
+
+UART_SendChar/76 (UART_SendChar) @0x7f713f552ca8
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+UART_GetCharNoWait/75 (UART_GetCharNoWait) @0x7f713f552b40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+UART_Init/74 (UART_Init) @0x7f713f5529d8
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+SystemCoreClock/73 (SystemCoreClock) @0x7f713f551c00
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public common
+  References: 
+  Referring: 
+  Availability: not_available
+  Varpool flags:
+LED_Write/72 (LED_Write) @0x7f713f552870
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+ClockGetConfiguration/71 (ClockGetConfiguration) @0x7f713f552708
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+SystemCoreClockSet/70 (SystemCoreClockSet) @0x7f713f5525a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+LED_Init/69 (LED_Init) @0x7f713f552438
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+LED_Toggle/68 (LED_Toggle) @0x7f713f5522d0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+counter.5446/67 (counter) @0x7f713f551500
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder prevailing_def_ironly asm_written section:.bss.counter.5446 (implicit_section)
+  Aux: @0x1
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+main/66 (main) @0x7f713f552168
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder asm_written public section:.text.main (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags:
+  Called by: 
+  Calls: 
+SysTick_Handler/65 (SysTick_Handler) @0x7f713f552000
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder asm_written public section:.text.SysTick_Handler (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags:
+  Called by: 
+  Calls: 
+TickDivisor/64 (TickDivisor) @0x7f713f551200
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible no_reorder asm_written public section:.rodata.TickDivisor (implicit_section)
+  Aux: @0x7f713f551500
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+SysTick_Config/59 (SysTick_Config) @0x7f713f9099d8
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly asm_written section:.text.SysTick_Config (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: local
+  Called by: 
+  Calls: 
+NVIC_SetPriority/54 (NVIC_SetPriority) @0x7f713f9092d0
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly asm_written section:.text.NVIC_SetPriority (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: local
+  Called by: 
+  Calls: 

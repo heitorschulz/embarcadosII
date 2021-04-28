@@ -325,12 +325,12 @@ LOAD linker stubs
  .debug_ranges  0x0000000000000080       0x60 gcc/system_efm32gg.o
  .debug_ranges  0x00000000000000e0       0x58 gcc/clock_efm32gg.o
 
-.debug_line     0x0000000000000000      0xd0c
+.debug_line     0x0000000000000000      0xcdc
  .debug_line    0x0000000000000000       0xf0 gcc/startup_efm32gg.o
- .debug_line    0x00000000000000f0      0x1ef gcc/main.o
- .debug_line    0x00000000000002df      0x1c4 gcc/led.o
- .debug_line    0x00000000000004a3      0x2bc gcc/system_efm32gg.o
- .debug_line    0x000000000000075f      0x5ad gcc/clock_efm32gg.o
+ .debug_line    0x00000000000000f0      0x1e3 gcc/main.o
+ .debug_line    0x00000000000002d3      0x1b8 gcc/led.o
+ .debug_line    0x000000000000048b      0x2b0 gcc/system_efm32gg.o
+ .debug_line    0x000000000000073b      0x5a1 gcc/clock_efm32gg.o
 
 .debug_str      0x0000000000000000      0xba5
  .debug_str     0x0000000000000000      0x258 gcc/startup_efm32gg.o

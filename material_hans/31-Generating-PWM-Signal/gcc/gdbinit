@@ -1,0 +1,7 @@
+# Run this script using gdb source command
+target remote localhost:2331
+monitor halt
+load gcc/pwm.axf
+monitor reset
+break main
+continue
